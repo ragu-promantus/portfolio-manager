@@ -53,7 +53,8 @@ export class PortfolioManager {
     if (response.account) {
       return response.account;
     }
-    throw new Error(`No account found:\n ${JSON.stringify(response, null, 2)}`);
+    //throw new Error(`No account found:\n ${JSON.stringify(response, null, 2)}`);
+    throw new Error(`No account found`);
   }
 
   async getAccount(cached = true): Promise<IAccount> {
